@@ -159,3 +159,13 @@ body {
 .panel-red > a:hover {
   color: #b52b27;
 }
+.img-circle {
+    background-color: lightgrey;
+    width: 250px;
+    height: 250px;
+    /* Adds Shadow
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    */
+}

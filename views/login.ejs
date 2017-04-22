@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head lang="en">
+        <% include templates/head.ejs %>
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <div class="container">
+                <div class="page-header">
+                    <h2>Please Sign In</h2>
+                </div> <!-- /.page-header -->
+
+                <!-- Login Panel -->
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                        <div class="jumbotron">
+                            <form role="form" action="{{url_for('login_confirm')}}" method="POST">
+                                <fieldset>
+                                    <!-- User ID -->
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-addon indent-username">User ID</span>
+                                        <input type="email" class="form-control" placeholder="Email Address" name='username'>
+                                    </div><br> <!-- /.input-group -->
+                                    <!-- User Password -->
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-addon">Password</span>
+                                        <input type="password" class="form-control" placeholder="********" name='password'>
+                                    </div> <!-- /.input-group -->
+                                    <br>
+                                    <p>
+                                        <!-- Sign Up Link -->
+                                        <a href="{{url_for('return_account_setup')}}"><small>New user? Click here to sign up!</small></a>
+
+                                        <!-- Login Button -->
+                                        <input type="submit" class="btn btn-primary btn-lg pull-right" value="Login">
+                                    </p>
+                                </fieldset>
+                            </form>
+                        </div> <!-- /.jumbotron -->
+                    </div> <!-- /.column control -->
+                </div> <!-- /.row -->
+
+                <!-- FOOTER -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <footer>
+                        <p class="pull-right"><a href="#">Back to top</a></p>
+                        <p>&copy; 2017 WorkLog, Inc. &middot; <a href="{{url_for('return_privacy')}}">Privacy</a> &middot; <a href="{{url_for('return_terms')}}">Terms</a></p>
+                    </footer>
+                </div> <!-- ./column control -->
+            </div> <!-- /.container -->
+        </div> <!-- /.page-wrapper -->
+
+        <% include templates/scripts.ejs %>
+    </body>
+</html>

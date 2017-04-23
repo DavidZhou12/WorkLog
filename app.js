@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 const index = require('./routes/index');
 const users = require('./routes/users');
+const calendar = require('./routes/calendar');
 const contact = require ('./routes/contact');
 const interns = require('./routes/interns');
 const links = require('./routes/links');
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/calendar', calendar);
 app.use('/contact', contact);
 app.use('/interns', interns);
 app.use('/links', links);

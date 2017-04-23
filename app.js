@@ -5,10 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+const index = require('./routes/index');
+const users = require('./routes/users');
 const links = require('./routes/links');
 const login = require('./routes/login');
+const interns = require('./routes/interns');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/links', links);
 app.use('/login', login);
+app.use('/interns', interns);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

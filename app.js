@@ -17,6 +17,7 @@ const guideReimageWindows = require('./routes/guideReimageWindows');
 const interns = require('./routes/interns');
 const links = require('./routes/links');
 const login = require('./routes/login');
+const notifications = require('./routes/notifications');
 const projects = require('./routes/projects');
 const teachers = require('./routes/teachers');
 
@@ -46,6 +47,7 @@ app.use('/guideReimageWindows', guideReimageWindows);
 app.use('/interns', interns);
 app.use('/links', links);
 app.use('/login', login);
+app.use('/notifications', notifications);
 app.use('/projects', projects);
 app.use('/teachers', teachers);
 

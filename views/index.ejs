@@ -22,7 +22,7 @@
                                     <i class="fa fa-calendar fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
+                                    <h3 id="calendarPanelLabel">26</h3>
                                     <div>What's going on today!</div>
                                 </div>
                             </div>
@@ -206,5 +206,16 @@
         <!-- /.page-wrapper -->
 
 		<% include templates/scripts.ejs %>
+
+        // Function to get current date
+        // fills it into the calendar panel within the dashboard
+        <script type="text/javascript">
+            const monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const currentDate = new Date();
+            const currentMonth = monthName[currentDate.getMonth()];
+            const currentDay = currentDate.getDate();
+            const currentYear = currentDate.getFullYear();
+            document.getElementById("calendarPanelLabel").innerHTML = currentMonth + " " + currentDay + ", " + currentYear;
+        </script>
 	</body>
 </html>

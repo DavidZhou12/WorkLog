@@ -3,7 +3,7 @@ html, body {
 }
 body {
 	/*width: 100%;*/
-  background-color: #f8f8f8;
+  background-color: #2A3F54;
 }
 #wrapper {
   width: 100%;
@@ -34,6 +34,15 @@ body {
   margin-right: 0;
 }
 */
+.navbar-default {
+  background-color: #2A3F54;
+}
+.nav a {
+  color: #E7E7E7;
+}
+.sidebar {
+  color: #E7E7E7;
+}
 .navbar-top-links li {
   display: inline-block;
 }
@@ -83,11 +92,14 @@ body {
 .sidebar .sidebar-search {
   padding: 15px;
 }
+.sidebar ul li a:focus, .sidebar ul li a:hover {
+  background-color: #465C72;
+}
 .sidebar ul li {
   border-bottom: 1px solid #e7e7e7;
 }
 .sidebar ul li a.active {
-  background-color: #eeeeee;
+  background-color: #465C72;
 }
 .sidebar .arrow {
   float: right;

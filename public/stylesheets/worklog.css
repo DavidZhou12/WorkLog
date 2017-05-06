@@ -43,6 +43,9 @@ body {
 .sidebar {
   color: #E7E7E7;
 }
+.navbar-default .navbar-brand {
+  color: white;
+}
 .navbar-top-links li {
   display: inline-block;
 }

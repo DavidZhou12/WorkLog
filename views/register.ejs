@@ -15,28 +15,23 @@
                     <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
                         <div class="jumbotron">
                             <form role="form" action="/register" method="POST">
-                                <fieldset>
-                                    <!-- User ID -->
-                                    <div class="input-group input-group-lg">
-                                        <span class="input-group-addon indent-username">User ID</span>
-                                        <input type="email" class="form-control" placeholder="Email Address" name="email">
-                                    </div><br> <!-- /.input-group -->
-                                    <!-- User Password -->
-                                    <div class="input-group input-group-lg">
-                                        <span class="input-group-addon">Password</span>
-                                        <input type="password" class="form-control" placeholder="********" name="password1">
-                                    </div> <!-- /.input-group -->
-                                    <!-- Comfirm Password -->
-                                    <div class="input-group input-group-lg">
-                                        <span class="input-group-addon">Confirm Password</span>
-                                        <input type="password" class="form-control" placeholder="********" name="password2">
-                                    </div> <!-- /.input-group 
-                                    <br>
-                                    <p>
-                                        <!-- Register Button -->
-                                        <input type="submit" class="btn btn-primary btn-lg pull-right" value="Login">
-                                    </p>
-                                </fieldset>
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" class="form-control" placeholder="John Doe" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" placeholder="Enter email address here..." name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" placeholder="********" name="password1">
+                                </div>
+                                <div class="form-group">
+                                    <label>Comfirm Password</label>
+                                    <input type="password" class="form-control" placeholder="********" name="password2">
+                                </div>
+                                <button type="submit" class="btn btn-primary pull-right">Submit</button>
                             </form>
                         </div> <!-- /.jumbotron -->
                     </div> <!-- /.column control -->

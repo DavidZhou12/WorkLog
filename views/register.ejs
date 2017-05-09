@@ -10,7 +10,7 @@
                     <h2><%= title %></h2>
                 </div> <!-- /.page-header -->
 
-                <!-- Login Panel -->
+                <!-- Register Panel -->
                 <div class="row">
                     <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
                         <div class="jumbotron">
@@ -19,19 +19,21 @@
                                     <!-- User ID -->
                                     <div class="input-group input-group-lg">
                                         <span class="input-group-addon indent-username">User ID</span>
-                                        <input type="email" class="form-control" placeholder="Email Address">
+                                        <input type="email" class="form-control" placeholder="Email Address" name="email">
                                     </div><br> <!-- /.input-group -->
                                     <!-- User Password -->
                                     <div class="input-group input-group-lg">
                                         <span class="input-group-addon">Password</span>
-                                        <input type="password" class="form-control" placeholder="********">
+                                        <input type="password" class="form-control" placeholder="********" name="password1">
                                     </div> <!-- /.input-group -->
+                                    <!-- Comfirm Password -->
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-addon">Confirm Password</span>
+                                        <input type="password" class="form-control" placeholder="********" name="password2">
+                                    </div> <!-- /.input-group 
                                     <br>
                                     <p>
-                                        <!-- Sign Up Link -->
-                                        <a href="/register"><small>New user? Click here to sign up!</small></a>
-
-                                        <!-- Login Button -->
+                                        <!-- Register Button -->
                                         <input type="submit" class="btn btn-primary btn-lg pull-right" value="Login">
                                     </p>
                                 </fieldset>

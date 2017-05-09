@@ -29,6 +29,7 @@ const links = require('./routes/links');
 const login = require('./routes/login');
 const notifications = require('./routes/notifications');
 const projects = require('./routes/projects');
+const register = require('./routes/register');
 const teachers = require('./routes/teachers');
 const tickets = require('./routes/tickets');
 
@@ -105,6 +106,7 @@ app.use('/links', links);
 app.use('/login', login);
 app.use('/notifications', notifications);
 app.use('/projects', projects);
+app.use('/register', register);
 app.use('/teachers', teachers);
 app.use('/tickets', tickets);
 

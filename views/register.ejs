@@ -5,6 +5,14 @@
     </head>
     <body>
         <div class="page-wrapper">
+            <% if(errors) { %>
+                <div class="alert alert-danger alert-dismissible alert-fixed" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <% errors.forEach(function(error) { %>
+                        <%= error.msg %><br>
+                    <% }); %>
+                </div>
+            <% } %>
             <div class="container">
                 <div class="page-header">
                     <h2><%= title %></h2>

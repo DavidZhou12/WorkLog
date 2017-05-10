@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+// Get User Model
+var User = require('../models/user');
+
 /* GET registration page. */
 router.get('/', function(req, res, next) {
 	var errors;
@@ -29,8 +32,21 @@ router.post('/', function(req, res) {
 			title: 'Register',
 			errors: errors
 		});
-	} else {
-		console.log('PASSED');
+	} else {	// Add user to database
+		var newUser = new User({
+			name: name,
+			email: email,
+			password: password1
+		});
+
+		User.createuser(newUser, function(err, user) {
+			if (err) throw err;
+			console.log(user);
+		});
+
+		//req.flash('success_msg', 'You are registered and can now login');
+
+		res.redirect('/login');
 	}
 });
 

@@ -21,6 +21,13 @@ body {
     border-left: 1px solid #e7e7e7;
   }
 }
+.alert-fixed {
+  position: fixed;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90%;
+  z-index: 999;
+}
 .lead {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   font-size: 1.25rem;

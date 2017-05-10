@@ -9,7 +9,7 @@ var db = mongoose.connection;
 var UserSchema = mongoose.Schema({
 	email: {
 		type: String,
-		index: true;
+		index: true
 	},
 	password: {
 		type: String

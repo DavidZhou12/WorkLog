@@ -1,10 +1,6 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
-// Connect to the DB
-mongoose.connect('mongodb://localhost/worklog');
-var db = mongoose.connection;
-
 // User Schema
 var UserSchema = mongoose.Schema({
 	email: {

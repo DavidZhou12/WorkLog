@@ -3,6 +3,9 @@ var router = express.Router();
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
+// Get User Model
+var User = require('../models/user');
+
 /* GET login page. */
 router.get('/', function(req, res, next) {
   res.render('login', { title: 'Login' });

@@ -21,7 +21,9 @@ passport.use(new LocalStrategy(
 
 		User.comparePassword(password, user.password, function(err, isMatch){
 			if(err) throw err;
-			if(isMatch){
+			if(isMatch && user.admin == false) {
+				return done(null, false, {message: "System administrators has not yet approved your account. Please try again later."})
+			} else if(isMatch){
 				return done(null, user);
 			} else {
 				return done(null, false, {message: 'Invalid password'});

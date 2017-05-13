@@ -1,18 +1,10 @@
 var express = require('express');
 var router = express.Router();
+const functions = require('./functions.js');
 
 /* GET guide page. */
-router.get('/', ensureAuthenticated, function(req, res) {
+router.get('/', functions.ensureAuthenticated, function(req, res) {
   res.render('guideBackup', { title: 'How to Backup Computers' });
 });
-
-function ensureAuthenticated(req, res, next){
-	if(req.isAuthenticated()) {
-		return next();
-	} else {
-		//req.flash('error_msg','You are not logged in');
-		res.redirect('/login');
-	}
-}
 
 module.exports = router;

@@ -36,7 +36,8 @@ router.post('/', function(req, res) {
 		var newUser = new User({
 			name: name,
 			email: email,
-			password: password1
+			password: password1,
+			admin: false
 		});
 
 		User.createUser(newUser, function(err, user) {

@@ -16,7 +16,7 @@ passport.use(new LocalStrategy(
 	User.getUserByUsername(username, function(err, user){
 		if(err) throw err;
 		if(!user){
-			return done(null, false, {message: 'Unknown User'});
+			return done(null, false, {message: 'Unable to find a user with this email address. Please try again.'});
 		}
 
 		User.comparePassword(password, user.password, function(err, isMatch){
@@ -49,7 +49,7 @@ router.post('/',
 
 router.get('/logout', function(req, res) {
 	req.logout();
-	req.flash('success_msg', 'You are logged out');
+	req.flash('success_msg', 'You have successfully signed out.');
 	res.redirect('/login');
 });
 

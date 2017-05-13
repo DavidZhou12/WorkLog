@@ -15,6 +15,10 @@ var UserSchema = mongoose.Schema({
 	name: {
 		type: String,
 		required: true
+	},
+	admin: {
+		type: Boolean,
+		required: true
 	}
 });
 
@@ -23,6 +27,7 @@ var User = module.exports = mongoose.model('User', UserSchema);
 
 // User functions
 module.exports.createUser = function(newUser, callback){
+	newUser.admin = false;
 	bcrypt.genSalt(10, function(err, salt) {
 	    bcrypt.hash(newUser.password, salt, function(err, hash) {
 	        newUser.password = hash;

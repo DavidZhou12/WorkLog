@@ -41,11 +41,9 @@ router.post('/', function(req, res) {
 
 		User.createUser(newUser, function(err, user) {
 			if (err) throw err;
-			console.log(user);
 		});
 
-		req.flash('success_msg', 'You are registered and can now login');
-
+		req.flash('success_msg', 'You are registered. Please wait for system administrators to approve your account before you may login.');
 		res.redirect('/login');
 	}
 });

@@ -16,6 +16,7 @@
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "*",
+    "googleapis": "^19.0.0",
     "mongodb": "*",
     "mongoose": "*",
     "morgan": "~1.8.1",

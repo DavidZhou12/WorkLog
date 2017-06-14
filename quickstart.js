@@ -110,7 +110,7 @@ function listMajors(auth) {
 
     sheets.spreadsheets.values.get({
       auth: auth,
-      spreadsheetId: '1ZrHhgB12s7cLIClIGyNL7oawbxM9Of6tsBDCaOvrEXI',
+      spreadsheetId: '',
       range: rangeToCheck,
     }, function(err, response) {
       if (err) {
